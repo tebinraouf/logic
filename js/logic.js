@@ -21,7 +21,6 @@ var stencilGraph = new joint.dia.Graph,
     interactive: false
   });
 
-
 // zoom the viewport by 50%
 paper.scale(1.0,1.0);
 
@@ -71,22 +70,29 @@ joint.shapes.logic.Output.prototype.onSignal = function(signal) {
     toggleLive(this, signal);
 }
 
+    var repeater = new joint.shapes.logic.Repeater({ position: { x: 40, y: 10 }});
+    var or = new joint.shapes.logic.Or({ position: { x: 40, y: 60 }});
+    var and = new joint.shapes.logic.And({ position: { x: 40, y: 110 }});
+    var not = new joint.shapes.logic.Not({ position: { x: 40, y: 160 }});
+    var nand = new joint.shapes.logic.Nand({ position: { x: 40, y: 210 }});
+    var nor = new joint.shapes.logic.Nor({ position: { x: 40, y: 260 }});
+    var xor = new joint.shapes.logic.Xor({ position: { x: 40, y: 310 }});
+    var xnor = new joint.shapes.logic.Xnor({ position: { x: 40, y: 360 }});
 
+    var gateLists = [repeater, or, and, not, nand, nor, xor, xnor];
 
-var gates = {
-    repeater: new joint.shapes.logic.Repeater({ position: { x: 40, y: 10 }}), 
-    or: new joint.shapes.logic.Or({ position: { x: 40, y: 60 }}), 
-    and: new joint.shapes.logic.And({ position: { x: 40, y: 110 }}),
-    not: new joint.shapes.logic.Not({ position: { x: 40, y: 160 }}),
-    nand: new joint.shapes.logic.Nand({ position: { x: 40, y: 210 }}),
-    nor: new joint.shapes.logic.Nor({ position: { x: 40, y: 260 }}),
-    xor: new joint.shapes.logic.Xor({ position: { x: 40, y: 310 }}),
-    xnor: new joint.shapes.logic.Xnor({ position: { x: 40, y: 360 }}),
-    // input: new joint.shapes.logic.Input({ position: { x: 40, y: 410 }}),
-    // output: new joint.shapes.logic.Output({ position: { x: 40, y: 460 }})
-};
+function listGates(){
+    var list = document.getElementById("listOfGates");
+    var output;
+    for (var index = 0; index < gateLists.length; index++) {
+        output += '<option>';
+        output += gateLists[index].get('type');
+        output += '</option>';
+    }
+    list.innerHTML = output;
+}
 
-stencilGraph.addCells(_.toArray(gates));
+stencilGraph.addCells(gateLists);
 
 stencilPaper.on('cell:pointerdown', function(cellView, e, x, y) {
   $('body').append('<div id="flyPaper" style="position:fixed;z-index:100;opacity:.7;pointer-event:none;"></div>');
