@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Logic Circuits</title>
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/joint.css" />
+    <link rel="stylesheet" type="text/css" href="css/logic.css" />
+</head>
+<body>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+        <div id="stencil">
+            <div class="form-group">
+                <label for="exampleSelect1">Custom Gate</label>
+                <select class="form-control" id="exampleSelect1">
+                    <option>1</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="number" class="form-control" value="3">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Add</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div id="paper"></div>
+    </div>
+    <script src="js/jquery/dist/jquery.js"></script>
+    <script src="js/lodash/index.js"></script>
+    <script src="js/backbone/backbone.js"></script>
+    <script src="js/joint.js"></script>
+    <script src="js/logic.js"></script>
+</body>
+</html>
