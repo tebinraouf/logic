@@ -4,11 +4,40 @@ var windowHeight = window.innerHeight;
 
 
 
-// Canvas where sape are dropped
+// Canvas where shapes are dropped
 var graph = new joint.dia.Graph,
   paper = new joint.dia.Paper({
     el: $('#paper'),
-    model: graph
+    model: graph,
+    height: windowHeight,
+    width: windowWidth-188,
+    snapLinks: true,
+    linkPinning: false,
+    defaultLink: new joint.shapes.logic.Wire,
+
+    validateConnection: function(vs, ms, vt, mt, e, vl) {
+
+        if (e === 'target') {
+
+            // target requires an input port to connect
+            if (!mt || !mt.getAttribute('class') || mt.getAttribute('class').indexOf('input') < 0) return false;
+
+            // check whether the port is being already used
+            var portUsed = _.find(this.model.getLinks(), function(link) {
+
+                return (link.id !== vl.model.id &&
+                        link.get('target').id === vt.model.id &&
+                        link.get('target').port === mt.getAttribute('port')); 
+            });
+
+            return !portUsed;
+
+        } else { // e === 'source'
+
+            // source requires an output port to connect
+            return ms && ms.getAttribute('class') && ms.getAttribute('class').indexOf('output') >= 0; 
+        }
+    }
   });
 
 
@@ -16,10 +45,10 @@ var graph = new joint.dia.Graph,
 var stencilGraph = new joint.dia.Graph,
   stencilPaper = new joint.dia.Paper({
     el: $('#stencil'),
-    height: windowHeight,
     model: stencilGraph,
     interactive: false
   });
+  //console.log(stencilPaper['el']['clientWidth']);
 
 // zoom the viewport by 50%
 paper.scale(1.0,1.0);
@@ -56,6 +85,23 @@ function initializeSignal() {
 
     return signal;
 }
+var highlightedCellView = [];
+//remove on double click
+paper.on('cell:pointerdblclick', function(cellview, evt, x, y) { 
+    //cellview.highlight();
+    cellview.remove();
+});
+//highlight on click
+paper.on('cell:pointerclick', function(cellView) {
+    cellView.highlight();
+    highlightedCellView.push(cellView);
+});
+//unhighlight on paper click
+paper.on('blank:pointerclick', function(cellview){
+    for (var index = 0; index < highlightedCellView.length; index++) {
+        highlightedCellView[index].unhighlight();
+    }
+});
 
 // Every logic gate needs to know how to handle a situation, when a signal comes to their ports.
 joint.shapes.logic.Gate.prototype.onSignal = function(signal, handler) {
@@ -95,7 +141,7 @@ function addGate(){
     var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
     var userSelectedText = document.getElementById('listOfGates').options;
     if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type')){
-        var or = new joint.shapes.logic.Or({ position: { x: 340, y: 60 }});
+        var or = new joint.shapes.logic.Or({ position: { x: getRandomArbitrary(100, windowWidth), y: 60 }});
         graph.addCell(or);
     } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type')){
         var and = new joint.shapes.logic.And({ position: { x: 340, y: 60 }});
@@ -115,10 +161,14 @@ function addGate(){
     }    
 }
 
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
 stencilGraph.addCells(gateLists);
 
 stencilPaper.on('cell:pointerdown', function(cellView, e, x, y) {
-  $('body').append('<div id="flyPaper" style="position:fixed;z-index:100;opacity:.2;pointer-event:none;"></div>');
+  $('body').append('<div id="flyPaper" style="background:none;position:fixed;z-index:100;opacity:.2;pointer-event:none;"></div>');
   var flyGraph = new joint.dia.Graph,
     flyPaper = new joint.dia.Paper({
       el: $('#flyPaper'),
