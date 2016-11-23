@@ -71,31 +71,54 @@ joint.shapes.logic.Output.prototype.onSignal = function(signal) {
 }
 
     var repeater = new joint.shapes.logic.Repeater({ position: { x: 40, y: 10 }});
+    var not = new joint.shapes.logic.Not({ position: { x: 40, y: 160 }});
     var or = new joint.shapes.logic.Or({ position: { x: 40, y: 60 }});
     var and = new joint.shapes.logic.And({ position: { x: 40, y: 110 }});
-    var not = new joint.shapes.logic.Not({ position: { x: 40, y: 160 }});
     var nand = new joint.shapes.logic.Nand({ position: { x: 40, y: 210 }});
     var nor = new joint.shapes.logic.Nor({ position: { x: 40, y: 260 }});
     var xor = new joint.shapes.logic.Xor({ position: { x: 40, y: 310 }});
     var xnor = new joint.shapes.logic.Xnor({ position: { x: 40, y: 360 }});
 
-    var gateLists = [repeater, or, and, not, nand, nor, xor, xnor];
+    var gateLists = [repeater, not, or, and, nand, nor, xor, xnor];
 
 function listGates(){
     var list = document.getElementById("listOfGates");
     var output;
-    for (var index = 0; index < gateLists.length; index++) {
+    for (var index = 2; index < gateLists.length; index++) {
         output += '<option>';
         output += gateLists[index].get('type');
         output += '</option>';
     }
     list.innerHTML = output;
 }
+function addGate(){
+    var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
+    var userSelectedText = document.getElementById('listOfGates').options;
+    if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type')){
+        var or = new joint.shapes.logic.Or({ position: { x: 340, y: 60 }});
+        graph.addCell(or);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type')){
+        var and = new joint.shapes.logic.And({ position: { x: 340, y: 60 }});
+        graph.addCell(and);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type')){
+        var nand = new joint.shapes.logic.Nand({ position: { x: 340, y: 60 }});
+        graph.addCell(nand);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[5].get('type')){
+        var nor = new joint.shapes.logic.Nor({ position: { x: 340, y: 60 }});
+        graph.addCell(nor);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[6].get('type')){
+        var xor = new joint.shapes.logic.Xor({ position: { x: 340, y: 60 }});
+        graph.addCell(xor);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[7].get('type')){
+        var xnor = new joint.shapes.logic.Xnor({ position: { x: 340, y: 60 }});
+        graph.addCell(xnor);
+    }    
+}
 
 stencilGraph.addCells(gateLists);
 
 stencilPaper.on('cell:pointerdown', function(cellView, e, x, y) {
-  $('body').append('<div id="flyPaper" style="position:fixed;z-index:100;opacity:.7;pointer-event:none;"></div>');
+  $('body').append('<div id="flyPaper" style="position:fixed;z-index:100;opacity:.2;pointer-event:none;"></div>');
   var flyGraph = new joint.dia.Graph,
     flyPaper = new joint.dia.Paper({
       el: $('#flyPaper'),
