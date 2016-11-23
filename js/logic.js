@@ -2,7 +2,14 @@
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 
+/* Zoom Functionality and Grid Style */
 
+//Initial Parameters
+var gridsize = 1;
+var currentScale = 1;
+
+
+var targetElement = $("#paper")[0];
 
 // Canvas where shapes are dropped
 var graph = new joint.dia.Graph,
@@ -11,6 +18,7 @@ var graph = new joint.dia.Graph,
     model: graph,
     height: windowHeight,
     width: windowWidth-188,
+    gridsize: gridsize,
     snapLinks: true,
     linkPinning: false,
     defaultLink: new joint.shapes.logic.Wire,
@@ -39,6 +47,29 @@ var graph = new joint.dia.Graph,
         }
     }
   });
+
+setGrid(paper, gridsize*15, '#808080');
+
+panAndZoom = svgPanZoom(targetElement.childNodes[0],{
+    viewportSelector: targetElement.childNodes[0].childNodes[0],
+    fit: false,
+    zoomScaleSensitivity: 0.4,
+    panEnabled: false,
+    onZoom: function(scale){
+        currentScale = scale;
+        setGrid(paper, gridsize*15*currentScale, '#808080');
+    },
+    beforePan: function(oldpan, newpan){
+        setGrid(paper, gridsize*15*currentScale, '#808080', newpan);
+    }
+});
+
+paper.on('blank:pointerdown', function (evt, x, y) {
+    panAndZoom.enablePan();
+});
+paper.on('cell:pointerup blank:pointerup', function(cellView, event) {
+    panAndZoom.disablePan();
+});
 
 
 // Canvas from which you take shapes
@@ -136,6 +167,7 @@ function listGates(){
         output += '</option>';
     }
     list.innerHTML = output;
+
 }
 function addGate(){
     var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
@@ -211,7 +243,25 @@ stencilPaper.on('cell:pointerdown', function(cellView, e, x, y) {
   });
 });
 
-
+function setGrid(paper, size, color, offset) {
+    // Set grid size on the JointJS paper object (joint.dia.Paper instance)
+    paper.options.gridsize = gridsize;
+    // Draw a grid into the HTML 5 canvas and convert it to a data URI image
+    var canvas = $('<canvas/>', { width: size, height: size });
+    canvas[0].width = size;
+    canvas[0].height = size;
+    var context = canvas[0].getContext('2d');
+    context.beginPath();
+    context.rect(1, 1, 1, 1);
+    context.fillStyle = color || '#AAAAAA';
+    context.fill();
+    // Finally, set the grid background image of the paper container element.
+    var gridBackgroundImage = canvas[0].toDataURL('image/png');
+    $(paper.el.childNodes[0]).css('background-image', 'url("' + gridBackgroundImage + '")');
+    if(typeof(offset) != 'undefined'){  
+        $(paper.el.childNodes[0]).css('background-position', offset.x + 'px ' + offset.y + 'px');
+    }
+}
 
 
 /*
