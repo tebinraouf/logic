@@ -53,22 +53,29 @@ setGrid(paper, gridsize*15, '#808080');
 panAndZoom = svgPanZoom(targetElement.childNodes[0],{
     viewportSelector: targetElement.childNodes[0].childNodes[0],
     fit: false,
-    zoomScaleSensitivity: 0.4,
-    panEnabled: false,
+    zoomScaleSensitivity: 0.1,
+    panEnabled: true,
     onZoom: function(scale){
         currentScale = scale;
         setGrid(paper, gridsize*15*currentScale, '#808080');
     },
     beforePan: function(oldpan, newpan){
         setGrid(paper, gridsize*15*currentScale, '#808080', newpan);
-    }
+    },
+    
 });
+panAndZoom.disableDblClickZoom();
+panAndZoom.setMinZoom(0.3);
 
-paper.on('blank:pointerdown', function (evt, x, y) {
-    panAndZoom.enablePan();
-});
-paper.on('cell:pointerup blank:pointerup', function(cellView, event) {
-    panAndZoom.disablePan();
+// paper.on('blank:pointerdown', function (evt, x, y) {
+//     panAndZoom.enablePan();
+// });
+// paper.on('cell:pointerup blank:pointerup', function(cellView, event) {
+//     panAndZoom.disablePan();
+// });
+
+paper.on('blank:pointerdblclick', function(evt, x, y){
+    console.log("Test!");
 });
 
 
@@ -426,6 +433,8 @@ graph.on('change:signal', function(wire, signal) {
 });
 
 // initialize signal and keep its value
+
 var current = initializeSignal();
 
 */
+
