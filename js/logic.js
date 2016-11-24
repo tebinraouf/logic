@@ -54,7 +54,7 @@ panAndZoom = svgPanZoom(targetElement.childNodes[0],{
     viewportSelector: targetElement.childNodes[0].childNodes[0],
     fit: false,
     zoomScaleSensitivity: 0.1,
-    panEnabled: true,
+    panEnabled: false,
     onZoom: function(scale){
         currentScale = scale;
         setGrid(paper, gridsize*15*currentScale, '#808080');
@@ -80,13 +80,13 @@ paper.on('blank:pointerdblclick', function(evt, x, y){
 
 
 // Canvas from which you take shapes
-var stencilGraph = new joint.dia.Graph,
-  stencilPaper = new joint.dia.Paper({
+var sideGraph = new joint.dia.Graph,
+  sidePaper = new joint.dia.Paper({
     el: $('#stencil'),
-    model: stencilGraph,
+    model: sideGraph,
     interactive: false
   });
-  //console.log(stencilPaper['el']['clientWidth']);
+  //console.log(sidePaper['el']['clientWidth']);
 
 // zoom the viewport by 50%
 paper.scale(1.0,1.0);
@@ -176,6 +176,31 @@ function listGates(){
     list.innerHTML = output;
 
 }
+
+$("#customGate").click(function(event){
+    if(!$("#menu").is(":visible")){
+        var tag = '<div class="row" id="menu"><div class="col-lg-12" style="height: 40px; background:#E3E0CE;">Test</div></div>';
+        $( "#sidebar" ).before( tag );
+        $("#customGate").removeClass("glyphicon glyphicon-cog").addClass("glyphicon glyphicon-remove-circle"); 
+    }else{
+       removeElementsCSSMenu();
+    }
+});
+
+paper.on('blank:pointerclick', function(cellview){
+    removeElementsCSSMenu()
+});
+sidePaper.on('blank:pointerclick', function(cellview){
+    removeElementsCSSMenu()
+});
+
+
+function removeElementsCSSMenu(){
+    $("#customGate").removeClass("glyphicon glyphicon-remove-circle").addClass("glyphicon glyphicon-cog"); 
+    $("#menu").remove();
+}
+
+
 function addGate(){
     var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
     var userSelectedText = document.getElementById('listOfGates').options;
@@ -204,9 +229,9 @@ function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-stencilGraph.addCells(gateLists);
+sideGraph.addCells(gateLists);
 
-stencilPaper.on('cell:pointerdown', function(cellView, e, x, y) {
+sidePaper.on('cell:pointerdown', function(cellView, e, x, y) {
   $('body').append('<div id="flyPaper" style="background:none;position:fixed;z-index:100;opacity:.2;pointer-event:none;"></div>');
   var flyGraph = new joint.dia.Graph,
     flyPaper = new joint.dia.Paper({
