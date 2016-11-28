@@ -14980,6 +14980,44 @@ joint.shapes.logic.Xnor = joint.shapes.logic.Gate21.extend({
 
 });
 
+
+
+
+joint.shapes.logic.myAND = joint.shapes.logic.Gate21.extend({
+
+
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+
+    defaults: _.defaultsDeep({
+
+        type: 'logic.myAND',
+        attrs: { image: { 'xlink:href': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAd0AAAEECAYAAABtDO6JAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAC4jAAAuIwF4pT92AAAPUklEQVR42u3dQWjbV54H8NeljXOZk3opBINATLoslOkwSJhdqqT0EHpQYUpnkWNqKMPETJYNpWEmCLxkCQTvkqUNmYI9lLYe3JhpyUB1KFko2yjsopW7h2UvO14Eak2hlxi6N7s5dA+Vs8bjvyxbsp7+0ucDf+z6D8lPqsjX773fe/8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgMN4LHYBDJ9ms/lE7BroTi6Xexi7BgCOqFKpzIQQtkII37mG/tra78pkMs1KpTKzuLh4xi9QAEOsHbqxw8R1TMFcKBQ+rFQqM8IYYAgI3bG5/mRkLIgBBkzojvX1KIjL5fLVtbW1J2N/HgFGmtB17boehfDi4uKZmJ9LGBWPxy6A1NiIXQAHmuzznzex883c3Nzdne8LhUL11q1bv8zn8w9iv2CAVEsa6Waz2TuxayPZ+vr6iaWlpcLS0lIhm83e2blCCF/uuvo+Ci4UCh+ahgY4IqE7mqrVam5+fv6lfcK4bwFcLpevxn6dAKkidMfH+vr6iT4HsTVggMMQuuNt9/R06C2EH00/x35NAENL6LLbPiPhI4VvJpNpWvsF2EPokqRareaKxeKNXgO4Wq0+Hfu1AAwFoUs36vV6pocAFr4AIQhdDq9areaOuAYsfIHxJnTpxezs7MUjjH63Qghb1nyBsSN06Yc9o9+uwzeTyTRj1w7H6c9iFwCMnlKp1Gy1Wi/X6/UfF4vFf8pms38IBx8lOrG5uXkqOGgDGBdGuhyXQzZemXJmJBnpAgNRq9Uut1qtl4vF4kddjHwnQggT+Xz+KwdsACPLSJdBKRaLN4JRL2PGSBeIolarXa7X6z826mWcCF0gmqmpqc1Wq/Xy0tLSz7oJ30ajUQrfj3whlYQuEN2FCxcae9Z7k0y0v3qSEZB+1nSJ7RB7fD3FCEg3ocuw2LXFyIEajAzTy8BQqtVql2/evPnrA9Z6Hx2oEbte6IbQBYbWzslWxWLxo9AheNtfPTyBoSd0gaFXq9Uuz8/P/22HJquJEMJEqVT6T8ELpIY1XYZZl01WOpuBdBC6pEE3weuhCQwj08tA6nSzzru6unpF8AJDzUiXNOni/Oat9mcaYPgIXdJmdnb24gH7eXU1MzRMLwOptry8/PbMzMzvOnU262pmWAhdIPWuXbv2cTfBG7tOELrASOgieENwchWRCV1gZOwEb9i/q3kihBCc1UxMQhcYKdeuXfu4w3aiic3NzVOeTkQsQhcYObVa7XKn4G00GiVbiYjh8Zh/ebPZfCL2G8D3crncw9g1QD/VarXL2Ww222q1Qghhcs/tievXr7/TbDZ/77PPWGj/lrkVOj8r0zWYa2vnFyD7dBk1B+3hjV0f4yX29PJE738EfeD/AyPr9u3bv+jU0Wx9l0GKHboAx2pqamqzU0dzo9EoOTiDQRG6wMg7qKPZwRkMitAFxkK7seo/ku6bZmYQonYvhxC2Y78BwPi4e/du+dy5c6utVuune25NNBqN0tra2pP5fP5B7DqBMaF7mVE3Ozt7MSQ/DlA3M8fK9DIwVpaXl9/uNM3s0AyOk9AFxs7du3fLCduIJq5fv/5O7PoYXUIXGDunT5/+dnJyshX272bWVMWxEbrAWOrQzTzRaDRKjqnlOAhdYGxduXLlH0PC3t1CofDfsetj9AhdYGxduHChkdRUtbm5ecpol34TusBYu3379i+C0S4DInSBsTY1NbVptMugCF1g7HUa7Z4/f/6D2PUxOoQuMPY6jXYbjUYpdn2MDqELEDqOdkO5XL4auz5Gg9AFCB1HuxOrq6tXYtfHaBC6AG0d9u0GD7qnH4QuQFuHfbsedE9fCF2AXZ577rl/CQmjXeiV0AXYZXl5+e2kexqq6JXQBdhDQxXHRegC7NGpoQp6IXQB9uj0IARTzPRC6AJ0zxQzPRG6APu4efPmr4MpZvpM6ALso1QqNZOmmCuVykzs+kgnoQtwOBPXr19/J3YRpJPQBUgwMzPzu2CKmT4SugAJrl279nHSvbW1tSdj10f6CF2ADpIOynjzzTf/JnZtpI/QBehgcnKytd/PbR3iKIQuQAdvvPHGYrCuS58IXYAOSqVSM+les9l8InZ9pIvQBThA0rruu++++9exayNdhC7AES0tLV2NXQPpInQBDtDer/snNjc3T8WujXQRugAHePHFF/81aKaiD4QuwAGmpqY2k+5ppuIwhC5AF5KaqT799NO/jF0b6SF0AXqwsbFhXZeuCV2ALiSdTOWJQxyG0AXowvT09EexayD9hC5AF5555plm0MFMj4QuQBc6dTBDt4QuQI9sG6JbQhegNxOxCyA9hC5AlxL26gYPPqBbQhcABkToAvSo1WrlYtdAOghdgC4lHZCxurp6JXZtpIPQBeiSAzLoldAFgAERugAwIEIXoEtPPfXUZnAUJD0QugBdKpVKzdg1kG5CFwAG5PFYf/F77733wy+++CIb+w3ge2fOnPn3s2fP/m/sOiDtnMM8XHK53MPYNewWLXTff//9v6vVaudjvwE8ci6E8M+xi4C0+uyzz34YQgi5XO6/gvOYh8V2COFk7CJ2ixa6ACNkIoSwHrsIhp81XQAYEKELAAMidAF6tx1CON2+tmMXw/CypgvQB2fPnv2fXf8peNlXtNB96623Xvvmm28uxn4D+J7tQtA3Q9Uty3CJFrrPPvvstyGEb2O/AQAwKNZ0AWBAhC5Al6rVai52DaSb0AXo0tdff50JIUzGroP0EroAMCBCFwAGROgCdOn27duvxK6BdBO6AF3a2NjY93Gk5XJ5IXZtpIPQBehRNpttxq6BdBC6ADAgQhegS61W6yf7/fy11177fezaSAehC9AbDzega0IXoEe5XO5h7BpIB6EL0AVHQNIPQhegC46ApB+ELkAXFhYWfhW7BtJP6AL0oFKp/Dx2DaSH0AXoweTk5FexayA9hC5AFxL26G6/8MIL/xa7NtJD6AIcoF6vZ5Lu2S7EYQhdgAN88sknfxV0LtMHQhfgACsrK6/u9/NMJmM9l0MRugBHdOHChauxayBdhC7AAZKaqDzogMMSugAdLC0tFZLuaaLisIQuQAftk6g0UdEXQhfgCMrl8kLsGkgfoQvQQdJ67uuvv/6b2LWRPkIXIMH8/PxLSffy+fyD2PWRPkIXIEF7f671XPpG6AIczvbi4uK52EWQTkIXYB/VajWXsJ4b5ubm7sWuj3QSugD7uHTp0j8EU8v0mdAF6N62rUL0QugC7LG0tFRImlpeXV29Grs+0kvoAuzhFCqOi9AF2CPpQAxTy/RK6ALsMjs7ezHpnqlleiV0AXa5f//+88HUMsdE6AK0dWig2q5Wqz+KXR/pJ3QB2jo1UJVKpT/Gro/0E7oAIYR6vZ7RQMVxE7oAIYTp6enfhoRRrgYq+kXoAmOvwyg3FAqFauz6GB1CFxh7HUa52x988MH52PUxOoQuMNY6jXIzmcxXuVzuYewaGR1CFxhrnUa5jUbjz2PXx2gRusDY6vRgA6NcjoPQBcZWh325RrkcC6ELjKVisXgjaV9uoVCoGuVyHIQuMHbW19dPbGxsZEPCvtxGo/Gz2DUymoQuMHbOnTu32mq1frrPre1KpfLz2PUBY6JcLl8NIXy398pms3di1wb90H5035dhn895CGErdn0wMJVKZSZ8/6F3xb2ELiNpfX39RPuzvG/grq2tPRm7Rkbb47EL2MdE7AKA0dRpWrlQKFTz+fyD2DUy2qzpAmOhQ7dyCEHzFIMhdIGRNz8//1KtVnslJOzJXVtbOxW7RsbDME4vA/RNvV7PTE9PvxoSAte0MoM0jCPd7dgFAKNjenr6twnruCEE08oM1mOxC9ir2Ww+EbuGcXb+/PkPGo3GK3t/ns1m/9BqtV6OXR8cRjabvdNex913lNtsNn/g5Ckgmva2LVuGSL1isXgjdNiP2/6sA8QjdBkFBwVuoVD4MHaNjKdhXNMFOLKDOpUzmcxX1nGJRegCI2N+fv6llZWVxE7lEELY3NzMxa6T8SV0gZGwE7idOpVDCCdj18l4E7pA6nURuNvVavVHsesEh2MAqTY7O3txZWXl+YMCt1Qq/TF2rSB0gdQqFos3lpeXk5qmQghhe3Fx8ZzAZViYXgZSqVgs3ujQpRxCCNvlcnlhbm7uXuxaYYeRLpA62Wz2Tq1WSzppKoR24K6url6NXSvsZqQLpEa1Ws0dcLRjCO01XIELDD0nUjGs5ufnX2p/Dr/rcG1Vq9WnY9cK0BWhyzBqf/6SjnX8LoSwFQQuKWB6GRha3U4nt7+e1KXMsNNIBQylYrF449KlS9kDTpjazmQyXznakbQw0gWGys7otlarvXJQ4JbL5QWBC6SWNV1iKhaLN7pplgohbC0uLp6JXS9AT4QuMezqTO7ULPUocGPXC9AXQpdBqtfrmS7D1sPnGQkaqYAostnsnampqU5dyTu2QwhhbW3tVD6ffxC7buiFRipgoHbWbQ/YBrRju1AoVEMIJwUuo8BIFxiIYrF4Y2NjI3vAmck7jG4ZSUa6wLHZWbPdswWoU+Buh/ZWoGB0C4w6jVT0w85e29Bdg9SjRqlMJtOMXTscJ9PLQN/Mzs5evH///vOlUqmbKeQd2yGE0Gw2f5DL5R7Gfg0AA2Oky2HtGdUeamQbPKQAGGdCl27U6/XMrtOjDhO0whZgh9Alyc6I9ohBK2wB9hK67LZzPGOvQZvJZJrNZvOJ2K8HYKgI3fG2tLRU2BOyRwnaR2Hr2EaADoTu+FhfXz+xz0j2qCG7+2EEppAhgS1DMAaq1Wru888//4uVlZVXQwih1Wr95PTp0yF0v62nk+0QQiiXywurq6tXQwihVCrFfskwlIQujID19fUT9+7dezaEEBYWFn618/P2+cY7IdiPgN2xHUIIhUKheuvWrV/m8/kHq6ursd8GGHpCl660//H+MnYd7K+Po9Yk2zvflMvlhddff/03+Xz+QaPRCPl8PvbLB0inpDVd11hej9ZoFxcXz8T8XMKo8MADYMd2+P8HDvz92traqRDCyRDCybm5uXuxiwMYOUa6Y3M9GsVmMplmpVKZsY8WYMCE7shdW7uvQqHwoYAFGBLt0N0K8cPCdchADXuCtVqtPi1cYbg8FrsAho9/qNPDo/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB693+x0F8YG/Hk1gAAAABJRU5ErkJggg=='
+    
+        },
+        
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+
+        }
+
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+
+    operation: function(input1, input2, input3) {
+        return input1 && input2 && input3;
+    },
+
+});
+
+
+
+
+
+
+
+
 joint.shapes.logic.Wire = joint.dia.Link.extend({
 
     arrowheadMarkup: [

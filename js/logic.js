@@ -131,6 +131,7 @@ paper.on('cell:pointerdblclick', function(cellview, evt, x, y) {
 });
 //highlight on click
 paper.on('cell:pointerclick', function(cellView) {
+    console.log(cellView.el);
     cellView.highlight();
     highlightedCellView.push(cellView);
 });
@@ -201,6 +202,8 @@ function removeElementsCSSMenu(){
 }
 
 
+
+
 function addGate(){
     var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
     var userSelectedText = document.getElementById('listOfGates').options;
@@ -208,7 +211,7 @@ function addGate(){
         var or = new joint.shapes.logic.Or({ position: { x: getRandomArbitrary(100, windowWidth), y: 60 }});
         graph.addCell(or);
     } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type')){
-        var and = new joint.shapes.logic.And({ position: { x: 340, y: 60 }});
+        var and = new joint.shapes.logic.myAND({ position: { x: 340, y: 60 }});
         graph.addCell(and);
     } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type')){
         var nand = new joint.shapes.logic.Nand({ position: { x: 340, y: 60 }});
@@ -224,6 +227,19 @@ function addGate(){
         graph.addCell(xnor);
     }    
 }
+        var myAnd = new joint.shapes.logic.myAND({ position: { x: 40, y: 60 }});
+
+        //console.log(myAnd.operation(1,1,1));
+        console.log(myAnd);
+        myAnd.ports.in1 = 1;
+        myAnd.ports.in2 = 1;
+        myAnd.ports.in3 = 1;
+        //console.log(myAnd.operation);
+        console.log(myAnd.operation(myAnd.ports["in1"],myAnd.ports["in2"],myAnd.ports["in3"]));
+        
+
+
+graph.addCell(myAnd);
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
@@ -294,6 +310,9 @@ function setGrid(paper, size, color, offset) {
         $(paper.el.childNodes[0]).css('background-position', offset.x + 'px ' + offset.y + 'px');
     }
 }
+
+
+
 
 
 /*
