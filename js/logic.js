@@ -270,13 +270,6 @@ function addGate(){
 
 }
        
-
-
-             var andFour = new joint.shapes.logic.AndFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
-        graph.addCell(andFour);
-
-
-
         // //console.log(myAnd.operation(1,1,1));
         // console.log(andThree);
         // andThree.ports.in1 = 1;

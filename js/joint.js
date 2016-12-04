@@ -15003,11 +15003,11 @@ joint.shapes.logic.AndFour = joint.shapes.logic.Gate21.extend({
         type: 'logic.AndFour',
         attrs: { image: { 'xlink:href': './shapes/AndFour.svg'
         },
-            '.input1': { ref: '.body', 'ref-x': 1.0, 'ref-y': 0.2, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            '.input1': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.13, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.35, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.59, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.83, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': 2, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
@@ -15023,12 +15023,12 @@ joint.shapes.logic.AndFive = joint.shapes.logic.Gate21.extend({
         type: 'logic.AndFive',
         attrs: { image: { 'xlink:href': './shapes/AndFive.svg'
         },
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
-            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            '.input1': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.04, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.28, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.5, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': -1.3, 'ref-y': 0.96, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': 2, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
@@ -15042,15 +15042,15 @@ joint.shapes.logic.NandThree = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.NandThree',
         attrs: { image: { 'xlink:href': './shapes/NandThree.svg' },
-        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            '.input1': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': 2, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 && input2);
+    operation: function(input1, input2, input3) {
+        return !(input1 && input2 && input3);
     }
 });
 //Nand with Four Inputs
@@ -15059,16 +15059,16 @@ joint.shapes.logic.NandFour = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Nand',
         attrs: { image: { 'xlink:href': './shapes/NandFour.svg' },
-        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            '.input1': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.13, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.35, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.59, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.83, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': 2, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 && input2);
+    operation: function(input1, input2, input3, input4) {
+        return !(input1 && input2 && input3 && input4);
     }
 });
 //Nand with Five Inputs
@@ -15077,17 +15077,17 @@ joint.shapes.logic.NandFive = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Nand',
         attrs: { image: { 'xlink:href': './shapes/NandFive.svg' },
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            '.input1': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.04, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.28, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.50, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.96, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': 2, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 && input2);
+    operation: function(input1, input2, input3, input4, input5) {
+        return !(input1 && input2 && input3 && input4 && input4);
     }
 });
 
@@ -15122,8 +15122,8 @@ joint.shapes.logic.OrFour = joint.shapes.logic.Gate21.extend({
              circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return input1 || input2;
+    operation: function(input1, input2, input3, input4) {
+        return input1 || input2 || input3 || input4;
     }
 });
 //Or with Five Inputs
@@ -15141,8 +15141,8 @@ joint.shapes.logic.OrFive = joint.shapes.logic.Gate21.extend({
              circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return input1 || input2;
+    operation: function(input1, input2, input3, input4, input5) {
+        return input1 || input2 || input3 || input4 || input5;
     }
 });
 
@@ -15152,15 +15152,15 @@ joint.shapes.logic.NorThree = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
         type: 'logic.Nor',
         attrs: { image: { 'xlink:href': './shapes/norThree.svg' },
-        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
             '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
             '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
             }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 || input2);
+    operation: function(input1, input2, input3) {
+        return !(input1 || input2 || input3);
     }
 });
 //Nor with Four Inputs
@@ -15169,16 +15169,16 @@ joint.shapes.logic.NorFour = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
         type: 'logic.Nor',
         attrs: { image: { 'xlink:href': './shapes/norFour.svg' },
-        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.41, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.54, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.67, magnet: 'passive', port: 'in4' },
             '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
-            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            circle: { r: 2, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
             }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 || input2);
+    operation: function(input1, input2, input3, input4) {
+        return !(input1 || input2 || input3 || input4);
     }
 });
 //Nor with Five Inputs
@@ -15187,17 +15187,17 @@ joint.shapes.logic.NorFive = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
         type: 'logic.Nor',
         attrs: { image: { 'xlink:href': './shapes/norFive.svg' },
-        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
+            '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.50, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.66, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.84, magnet: 'passive', port: 'in5' },
             '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
-            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
             }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return !(input1 || input2);
+    operation: function(input1, input2, input3, input4, input5) {
+        return !(input1 || input2 || input3 || input4 || input5);
     }
 });
 
@@ -15207,9 +15207,10 @@ joint.shapes.logic.XorThree = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xor',
         attrs: { image: { 'xlink:href': './shapes/xorThree.svg' }, 
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
@@ -15223,11 +15224,12 @@ joint.shapes.logic.XorFour = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xor',
         attrs: { image: { 'xlink:href': './shapes/xorFour.svg' }, 
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.58, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
     operation: function(input1, input2) {
@@ -15240,12 +15242,13 @@ joint.shapes.logic.XorFive = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xor',
         attrs: { image: { 'xlink:href': './shapes/xorFive.svg' }, 
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
-             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.50, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.66, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.84, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
     operation: function(input1, input2) {
@@ -15258,14 +15261,15 @@ joint.shapes.logic.XnorThree = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xnor',
         attrs: { image: { 'xlink:href': './shapes/xnorThree.svg' },
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
              circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return (!input1 || !input2) && (input1 || input2);
+    operation: function(input1, input2, input3) {
+        return (!input1 || !input2 || !input3) && (input1 || input2 || input3);
     }
 });
 //Xnor with Four Inputs
@@ -15274,15 +15278,16 @@ joint.shapes.logic.XnorFour = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xnor',
         attrs: { image: { 'xlink:href': './shapes/xnorFour.svg' },
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.58, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return (!input1 || !input2) && (input1 || input2);
+    operation: function(input1, input2, input3, input4) {
+        return (!input1 || !input2 || !input3 || !input4) && (input1 || input2 || input3 || input4);
     }
 });
 //Xnor with Five Inputs
@@ -15291,16 +15296,17 @@ joint.shapes.logic.XnorFive = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
         type: 'logic.Xnor',
         attrs: { image: { 'xlink:href': './shapes/xnorFive.svg' },
-            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
-            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
-            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
-            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
-            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
-             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.50, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.66, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.84, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
-    operation: function(input1, input2) {
-        return (!input1 || !input2) && (input1 || input2);
+    operation: function(input1, input2, input3, input4, input5) {
+        return (!input1 || !input2 || !input3 || !input4 || !input5) && (input1 || input2 || input3 || input4 || input5);
     }
 });
 
