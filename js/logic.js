@@ -268,6 +268,8 @@ function addGate(){
     }
     
 
+  
+
 }
        
         // //console.log(myAnd.operation(1,1,1));
@@ -322,12 +324,55 @@ sidePaper.on('cell:pointerdown', function(cellView, e, x, y) {
       var s = flyShape.clone();
       s.position(x - target.left - offset.x, y - target.top - offset.y);
       graph.addCell(s);
+      
+      //console.log(graph.getLinks());
+      //console.log(graph.getElements());
+      //console.log(graph.getConnectedLinks(graph.getElements()[0]));
+      //console.log(s);
     }
     $('body').off('mousemove.fly').off('mouseup.fly');
     flyShape.remove();
     $('#flyPaper').remove();
   });
 });
+
+
+paper.on('link:connect', function(evt, cellView, magnet, arrowhead) { 
+    console.log("the link......:   ");
+    // console.log(graph.getElements());
+    // console.log(graph.getConnectedLinks(graph.getElements()[0]));
+    // console.log(graph.getLinks());
+     console.log("sourceMagnet: "+evt["sourceMagnet"].output);
+     console.log(evt);
+     console.log(magnet);
+
+
+    // for (var i=0; i<=graph.getElements().length; i++){
+    //     console.log(graph.getConnectedLinks(graph.getElements()[i]));
+    // }
+});
+
+graph.on('change:source change:target', function(link) {
+    if (link.get('source').id && link.get('target').id) {
+        console.log("Source: "+link.get('source').id);
+        console.log("Target: "+link.get('target').id);
+        // both ends of the link are connected.
+    }
+});
+
+paper.on('blank:pointerup ', function(evt, x, y) { 
+    //console.log(graph.toJSON());
+});
+
+graph.on('change remove add', function(cellView){
+    localStorage.setItem('graph', JSON.stringify(graph.toJSON()));
+    console.log(graph.toJSON());
+
+});
+
+
+var graphFromLocalStorage = localStorage.getItem('graph');
+graph.fromJSON(JSON.parse(graphFromLocalStorage));
 
 function setGrid(paper, size, color, offset) {
     // Set grid size on the JointJS paper object (joint.dia.Paper instance)

@@ -15057,7 +15057,7 @@ joint.shapes.logic.NandThree = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.NandFour = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Nand',
+        type: 'logic.NandFour',
         attrs: { image: { 'xlink:href': './shapes/NandFour.svg' },
             '.input1': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.13, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.35, magnet: 'passive', port: 'in2' },
@@ -15075,7 +15075,7 @@ joint.shapes.logic.NandFour = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.NandFive = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Nand',
+        type: 'logic.NandFive',
         attrs: { image: { 'xlink:href': './shapes/NandFive.svg' },
             '.input1': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.04, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': -1.33, 'ref-y': 0.28, magnet: 'passive', port: 'in2' },
@@ -15095,7 +15095,7 @@ joint.shapes.logic.NandFive = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.OrThree = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Or',
+        type: 'logic.OrThree',
         attrs: { image: { 'xlink:href': './shapes/orThree.svg' },
             '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
@@ -15112,7 +15112,7 @@ joint.shapes.logic.OrThree = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.OrFour = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Or',
+        type: 'logic.OrFour',
         attrs: { image: { 'xlink:href': './shapes/orFour.svg' },
             '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
@@ -15130,7 +15130,7 @@ joint.shapes.logic.OrFour = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.OrFive = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Or',
+        type: 'logic.OrFive',
         attrs: { image: { 'xlink:href': './shapes/orFive.svg' },
             '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
@@ -15150,7 +15150,7 @@ joint.shapes.logic.OrFive = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.NorThree = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
-        type: 'logic.Nor',
+        type: 'logic.NorThree',
         attrs: { image: { 'xlink:href': './shapes/norThree.svg' },
             '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
@@ -15167,7 +15167,7 @@ joint.shapes.logic.NorThree = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.NorFour = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
-        type: 'logic.Nor',
+        type: 'logic.NorFour',
         attrs: { image: { 'xlink:href': './shapes/norFour.svg' },
             '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.41, magnet: 'passive', port: 'in2' },
@@ -15185,7 +15185,7 @@ joint.shapes.logic.NorFour = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.NorFive = joint.shapes.logic.Gate21.extend({
     defaults: _.defaultsDeep({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
-        type: 'logic.Nor',
+        type: 'logic.NorFive',
         attrs: { image: { 'xlink:href': './shapes/norFive.svg' },
             '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
@@ -15205,7 +15205,7 @@ joint.shapes.logic.NorFive = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XorThree = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xor',
+        type: 'logic.XorThree',
         attrs: { image: { 'xlink:href': './shapes/xorThree.svg' }, 
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
@@ -15222,7 +15222,7 @@ joint.shapes.logic.XorThree = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XorFour = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xor',
+        type: 'logic.XorFour',
         attrs: { image: { 'xlink:href': './shapes/xorFour.svg' }, 
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
@@ -15240,7 +15240,7 @@ joint.shapes.logic.XorFour = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XorFive = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xor',
+        type: 'logic.XorFive',
         attrs: { image: { 'xlink:href': './shapes/xorFive.svg' }, 
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
@@ -15259,7 +15259,7 @@ joint.shapes.logic.XorFive = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XnorThree = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xnor',
+        type: 'logic.XnorThree',
         attrs: { image: { 'xlink:href': './shapes/xnorThree.svg' },
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
@@ -15276,7 +15276,7 @@ joint.shapes.logic.XnorThree = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XnorFour = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xnor',
+        type: 'logic.XnorFour',
         attrs: { image: { 'xlink:href': './shapes/xnorFour.svg' },
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
@@ -15294,7 +15294,7 @@ joint.shapes.logic.XnorFour = joint.shapes.logic.Gate21.extend({
 joint.shapes.logic.XnorFive = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
     defaults: _.defaultsDeep({
-        type: 'logic.Xnor',
+        type: 'logic.XnorFive',
         attrs: { image: { 'xlink:href': './shapes/xnorFive.svg' },
             '.input1': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 4.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },

@@ -9,7 +9,7 @@
 </head>
 <body onload="listGates()">
     <div class="row" id="sidebar">
-        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
             <div id="stencil">
                 <div class="col-lg-12">
                 <div class="form-group">
@@ -17,7 +17,7 @@
                     <select class="form-control" id="listOfGates"></select>
                 </div>
                 <div class="input-group">
-                    <input type="number" class="form-control" id="numberOfGate" value="3">
+                    <input type="number" class="form-control" id="numberOfGate" value="3" max="5" min="3">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" onclick="addGate()">Add</button>
                     </span>
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-10 col-md-10 col-sm-6 col-xs-6">
+        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
             <div id="paper"></div>
         </div>
     </div>
