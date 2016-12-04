@@ -14898,11 +14898,9 @@ joint.shapes.logic.Or = joint.shapes.logic.Gate21.extend({
         attrs: { image: { 'xlink:href': 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8c3ZnCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHdpZHRoPSIxMDAiCiAgIGhlaWdodD0iNTAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ2IgogICB2ZXJzaW9uPSIxLjAiCiAgIHNvZGlwb2RpOmRvY25hbWU9Ik9SIEFOU0kuc3ZnIgogICBpbmtzY2FwZTpvdXRwdXRfZXh0ZW5zaW9uPSJvcmcuaW5rc2NhcGUub3V0cHV0LnN2Zy5pbmtzY2FwZSI+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDE1IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3o9IjUwIDogMTUgOiAxIgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjI1IDogMTAgOiAxIgogICAgICAgaWQ9InBlcnNwZWN0aXZlMjcxNCIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiAwLjUgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfej0iMSA6IDAuNSA6IDEiCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMC41IDogMC4zMzMzMzMzMyA6IDEiCiAgICAgICBpZD0icGVyc3BlY3RpdmUyODA2IiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBpZD0icGVyc3BlY3RpdmUyODE5IgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjM3Mi4wNDcyNCA6IDM1MC43ODczOSA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF96PSI3NDQuMDk0NDggOiA1MjYuMTgxMDkgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDUyNi4xODEwOSA6IDEiCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBpZD0icGVyc3BlY3RpdmUyNzc3IgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49Ijc1IDogNDAgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfej0iMTUwIDogNjAgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDYwIDogMSIKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTMyNzUiCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iNTAgOiAzMy4zMzMzMzMgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfej0iMTAwIDogNTAgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDUwIDogMSIKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTU1MzMiCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMzIgOiAyMS4zMzMzMzMgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfej0iNjQgOiAzMiA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogMzIgOiAxIgogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgaWQ9InBlcnNwZWN0aXZlMjU1NyIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIyNSA6IDE2LjY2NjY2NyA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF96PSI1MCA6IDI1IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiAyNSA6IDEiCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPgogIDwvZGVmcz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iNCIKICAgICBpbmtzY2FwZTpjeD0iMTEzLjAwMDM5IgogICAgIGlua3NjYXBlOmN5PSIxMi44OTM3MzEiCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImcyNTYwIgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTpncmlkLWJib3g9InRydWUiCiAgICAgaW5rc2NhcGU6Z3JpZC1wb2ludHM9InRydWUiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAwMDAiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxMzk5IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9Ijg3NCIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMzciCiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii00IgogICAgIGlua3NjYXBlOnNuYXAtYmJveD0idHJ1ZSI+CiAgICA8aW5rc2NhcGU6Z3JpZAogICAgICAgaWQ9IkdyaWRGcm9tUHJlMDQ2U2V0dGluZ3MiCiAgICAgICB0eXBlPSJ4eWdyaWQiCiAgICAgICBvcmlnaW54PSIwcHgiCiAgICAgICBvcmlnaW55PSIwcHgiCiAgICAgICBzcGFjaW5neD0iMXB4IgogICAgICAgc3BhY2luZ3k9IjFweCIKICAgICAgIGNvbG9yPSIjMDAwMGZmIgogICAgICAgZW1wY29sb3I9IiMwMDAwZmYiCiAgICAgICBvcGFjaXR5PSIwLjIiCiAgICAgICBlbXBvcGFjaXR5PSIwLjQiCiAgICAgICBlbXBzcGFjaW5nPSI1IgogICAgICAgdmlzaWJsZT0idHJ1ZSIKICAgICAgIGVuYWJsZWQ9InRydWUiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGQ9Im0gNzAsMjUgYyAyMCwwIDI1LDAgMjUsMCIKICAgICAgIGlkPSJwYXRoMzA1OSIKICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2MiIC8+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgZD0iTSAzMSwxNSA1LDE1IgogICAgICAgaWQ9InBhdGgzMDYxIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjEuOTk5OTk5ODg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGQ9Ik0gMzIsMzUgNSwzNSIKICAgICAgIGlkPSJwYXRoMzk0NCIgLz4KICAgIDxnCiAgICAgICBpZD0iZzI1NjAiCiAgICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI2LjUsLTM5LjUpIj4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MztzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICBkPSJNIC0yLjQwNjI1LDQ0LjUgTCAtMC40MDYyNSw0Ni45Mzc1IEMgLTAuNDA2MjUsNDYuOTM3NSA1LjI1LDUzLjkzNzU0OSA1LjI1LDY0LjUgQyA1LjI1LDc1LjA2MjQ1MSAtMC40MDYyNSw4Mi4wNjI1IC0wLjQwNjI1LDgyLjA2MjUgTCAtMi40MDYyNSw4NC41IEwgMC43NSw4NC41IEwgMTQuNzUsODQuNSBDIDE3LjE1ODA3Niw4NC41MDAwMDEgMjIuNDM5Njk5LDg0LjUyNDUxNCAyOC4zNzUsODIuMDkzNzUgQyAzNC4zMTAzMDEsNzkuNjYyOTg2IDQwLjkxMTUzNiw3NC43NTA0ODQgNDYuMDYyNSw2NS4yMTg3NSBMIDQ0Ljc1LDY0LjUgTCA0Ni4wNjI1LDYzLjc4MTI1IEMgMzUuNzU5Mzg3LDQ0LjcxNTU5IDE5LjUwNjU3NCw0NC41IDE0Ljc1LDQ0LjUgTCAwLjc1LDQ0LjUgTCAtMi40MDYyNSw0NC41IHogTSAzLjQ2ODc1LDQ3LjUgTCAxNC43NSw0Ny41IEMgMTkuNDM0MTczLDQ3LjUgMzMuMDM2ODUsNDcuMzY5NzkzIDQyLjcxODc1LDY0LjUgQyAzNy45NTE5NjQsNzIuOTI5MDc1IDMyLjE5NzQ2OSw3Ny4xODM5MSAyNyw3OS4zMTI1IEMgMjEuNjM5MzM5LDgxLjUwNzkyNCAxNy4xNTgwNzUsODEuNTAwMDAxIDE0Ljc1LDgxLjUgTCAzLjUsODEuNSBDIDUuMzczNTg4NCw3OC4zOTE1NjYgOC4yNSw3Mi40NTA2NSA4LjI1LDY0LjUgQyA4LjI1LDU2LjUyNjY0NiA1LjM0MTQ2ODYsNTAuNTk5ODE1IDMuNDY4NzUsNDcuNSB6IgogICAgICAgICBpZD0icGF0aDQ5NzMiCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NzY2NjY3NjY2NjY2NjY2NzY2NzYyIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=' }}
 
     }, joint.shapes.logic.Gate21.prototype.defaults),
-
     operation: function(input1, input2) {
         return input1 || input2;
     }
-
 });
 
 joint.shapes.logic.And = joint.shapes.logic.Gate21.extend({
@@ -14958,11 +14956,9 @@ joint.shapes.logic.Xor = joint.shapes.logic.Gate21.extend({
         attrs: { image: { 'xlink:href': 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8c3ZnCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHdpZHRoPSIxMDAiCiAgIGhlaWdodD0iNTAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ2IgogICB2ZXJzaW9uPSIxLjAiCiAgIHNvZGlwb2RpOmRvY25hbWU9IlhPUiBBTlNJLnN2ZyIKICAgaW5rc2NhcGU6b3V0cHV0X2V4dGVuc2lvbj0ib3JnLmlua3NjYXBlLm91dHB1dC5zdmcuaW5rc2NhcGUiPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM0Ij4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiAxNSA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF96PSI1MCA6IDE1IDogMSIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIyNSA6IDEwIDogMSIKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTI3MTQiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogMC41IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3o9IjEgOiAwLjUgOiAxIgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjAuNSA6IDAuMzMzMzMzMzMgOiAxIgogICAgICAgaWQ9InBlcnNwZWN0aXZlMjgwNiIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgaWQ9InBlcnNwZWN0aXZlMjgxOSIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIzNzIuMDQ3MjQgOiAzNTAuNzg3MzkgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfej0iNzQ0LjA5NDQ4IDogNTI2LjE4MTA5IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiA1MjYuMTgxMDkgOiAxIgogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgaWQ9InBlcnNwZWN0aXZlMjc3NyIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSI3NSA6IDQwIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3o9IjE1MCA6IDYwIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiA2MCA6IDEiCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBpZD0icGVyc3BlY3RpdmUzMjc1IgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjUwIDogMzMuMzMzMzMzIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3o9IjEwMCA6IDUwIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiA1MCA6IDEiCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBpZD0icGVyc3BlY3RpdmU1NTMzIgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjMyIDogMjEuMzMzMzMzIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3o9IjY0IDogMzIgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDMyIDogMSIKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTI1NTciCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMjUgOiAxNi42NjY2NjcgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfej0iNTAgOiAyNSA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogMjUgOiAxIgogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIgLz4KICA8L2RlZnM+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJiYXNlIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnpvb209IjUuNjU2ODU0MiIKICAgICBpbmtzY2FwZTpjeD0iMjUuOTM4MTE2IgogICAgIGlua3NjYXBlOmN5PSIxNy4yMzAwNSIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0icHgiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHNob3dncmlkPSJ0cnVlIgogICAgIGlua3NjYXBlOmdyaWQtYmJveD0idHJ1ZSIKICAgICBpbmtzY2FwZTpncmlkLXBvaW50cz0idHJ1ZSIKICAgICBncmlkdG9sZXJhbmNlPSIxMDAwMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEzOTkiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iODc0IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIzMyIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTpzbmFwLWJib3g9InRydWUiPgogICAgPGlua3NjYXBlOmdyaWQKICAgICAgIGlkPSJHcmlkRnJvbVByZTA0NlNldHRpbmdzIgogICAgICAgdHlwZT0ieHlncmlkIgogICAgICAgb3JpZ2lueD0iMHB4IgogICAgICAgb3JpZ2lueT0iMHB4IgogICAgICAgc3BhY2luZ3g9IjFweCIKICAgICAgIHNwYWNpbmd5PSIxcHgiCiAgICAgICBjb2xvcj0iIzAwMDBmZiIKICAgICAgIGVtcGNvbG9yPSIjMDAwMGZmIgogICAgICAgb3BhY2l0eT0iMC4yIgogICAgICAgZW1wb3BhY2l0eT0iMC40IgogICAgICAgZW1wc3BhY2luZz0iNSIKICAgICAgIHZpc2libGU9InRydWUiCiAgICAgICBlbmFibGVkPSJ0cnVlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTciPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICBkPSJtIDcwLDI1IGMgMjAsMCAyNSwwIDI1LDAiCiAgICAgICBpZD0icGF0aDMwNTkiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjEuOTk5OTk5ODg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGQ9Ik0gMzAuMzg1NzE3LDE1IEwgNC45OTk5OTk4LDE1IgogICAgICAgaWQ9InBhdGgzMDYxIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjEuOTk5OTk5NzY7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGQ9Ik0gMzEuMzYyMDkxLDM1IEwgNC45OTk5OTk4LDM1IgogICAgICAgaWQ9InBhdGgzOTQ0IiAvPgogICAgPGcKICAgICAgIGlkPSJnMjU2MCIKICAgICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjYuNSwtMzkuNSkiPgogICAgICA8cGF0aAogICAgICAgICBpZD0icGF0aDM1MTYiCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjM7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgZD0iTSAtMi4yNSw4MS41MDAwMDUgQyAtMy44NDczNzQsODQuMTQ0NDA1IC00LjUsODQuNTAwMDA1IC00LjUsODQuNTAwMDA1IEwgLTguMTU2MjUsODQuNTAwMDA1IEwgLTYuMTU2MjUsODIuMDYyNTA1IEMgLTYuMTU2MjUsODIuMDYyNTA1IC0wLjUsNzUuMDYyNDUxIC0wLjUsNjQuNSBDIC0wLjUsNTMuOTM3NTQ5IC02LjE1NjI1LDQ2LjkzNzUgLTYuMTU2MjUsNDYuOTM3NSBMIC04LjE1NjI1LDQ0LjUgTCAtNC41LDQ0LjUgQyAtMy43MTg3NSw0NS40Mzc1IC0zLjA3ODEyNSw0Ni4xNTYyNSAtMi4yODEyNSw0Ny41IEMgLTAuNDA4NTMxLDUwLjU5OTgxNSAyLjUsNTYuNTI2NjQ2IDIuNSw2NC41IEMgMi41LDcyLjQ1MDY1IC0wLjM5NjY5Nyw3OC4zNzk0MjUgLTIuMjUsODEuNTAwMDA1IHoiCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NjY3NjY2Njc2MiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjM7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgZD0iTSAtMi40MDYyNSw0NC41IEwgLTAuNDA2MjUsNDYuOTM3NSBDIC0wLjQwNjI1LDQ2LjkzNzUgNS4yNSw1My45Mzc1NDkgNS4yNSw2NC41IEMgNS4yNSw3NS4wNjI0NTEgLTAuNDA2MjUsODIuMDYyNSAtMC40MDYyNSw4Mi4wNjI1IEwgLTIuNDA2MjUsODQuNSBMIDAuNzUsODQuNSBMIDE0Ljc1LDg0LjUgQyAxNy4xNTgwNzYsODQuNTAwMDAxIDIyLjQzOTY5OSw4NC41MjQ1MTQgMjguMzc1LDgyLjA5Mzc1IEMgMzQuMzEwMzAxLDc5LjY2Mjk4NiA0MC45MTE1MzYsNzQuNzUwNDg0IDQ2LjA2MjUsNjUuMjE4NzUgTCA0NC43NSw2NC41IEwgNDYuMDYyNSw2My43ODEyNSBDIDM1Ljc1OTM4Nyw0NC43MTU1OSAxOS41MDY1NzQsNDQuNSAxNC43NSw0NC41IEwgMC43NSw0NC41IEwgLTIuNDA2MjUsNDQuNSB6IE0gMy40Njg3NSw0Ny41IEwgMTQuNzUsNDcuNSBDIDE5LjQzNDE3Myw0Ny41IDMzLjAzNjg1LDQ3LjM2OTc5MyA0Mi43MTg3NSw2NC41IEMgMzcuOTUxOTY0LDcyLjkyOTA3NSAzMi4xOTc0NjksNzcuMTgzOTEgMjcsNzkuMzEyNSBDIDIxLjYzOTMzOSw4MS41MDc5MjQgMTcuMTU4MDc1LDgxLjUwMDAwMSAxNC43NSw4MS41IEwgMy41LDgxLjUgQyA1LjM3MzU4ODQsNzguMzkxNTY2IDguMjUsNzIuNDUwNjUgOC4yNSw2NC41IEMgOC4yNSw1Ni41MjY2NDYgNS4zNDE0Njg2LDUwLjU5OTgxNSAzLjQ2ODc1LDQ3LjUgeiIKICAgICAgICAgaWQ9InBhdGg0OTczIgogICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjc2NjY2NzY2NjY2NjY2Njc2Njc2MiIC8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K' }}
 
     }, joint.shapes.logic.Gate21.prototype.defaults),
-
     operation: function(input1, input2) {
         return (!input1 || input2) && (input1 || !input2);
     }
-
 });
 
 joint.shapes.logic.Xnor = joint.shapes.logic.Gate21.extend({
@@ -14971,51 +14967,342 @@ joint.shapes.logic.Xnor = joint.shapes.logic.Gate21.extend({
 
         type: 'logic.Xnor',
         attrs: { image: { 'xlink:href': 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgo8c3ZnCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHdpZHRoPSIxMDAiCiAgIGhlaWdodD0iNTAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ2IgogICB2ZXJzaW9uPSIxLjAiCiAgIHNvZGlwb2RpOmRvY25hbWU9IlhOT1IgQU5TSS5zdmciCiAgIGlua3NjYXBlOm91dHB1dF9leHRlbnNpb249Im9yZy5pbmtzY2FwZS5vdXRwdXQuc3ZnLmlua3NjYXBlIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzNCI+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogMTUgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfej0iNTAgOiAxNSA6IDEiCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMjUgOiAxMCA6IDEiCiAgICAgICBpZD0icGVyc3BlY3RpdmUyNzE0IiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDAuNSA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF96PSIxIDogMC41IDogMSIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIwLjUgOiAwLjMzMzMzMzMzIDogMSIKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTI4MDYiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTI4MTkiCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iMzcyLjA0NzI0IDogMzUwLjc4NzM5IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3o9Ijc0NC4wOTQ0OCA6IDUyNi4xODEwOSA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogNTI2LjE4MTA5IDogMSIKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIC8+CiAgICA8aW5rc2NhcGU6cGVyc3BlY3RpdmUKICAgICAgIGlkPSJwZXJzcGVjdGl2ZTI3NzciCiAgICAgICBpbmtzY2FwZTpwZXJzcDNkLW9yaWdpbj0iNzUgOiA0MCA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF96PSIxNTAgOiA2MCA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogNjAgOiAxIgogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgaWQ9InBlcnNwZWN0aXZlMzI3NSIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSI1MCA6IDMzLjMzMzMzMyA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF96PSIxMDAgOiA1MCA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF95PSIwIDogMTAwMCA6IDAiCiAgICAgICBpbmtzY2FwZTp2cF94PSIwIDogNTAgOiAxIgogICAgICAgc29kaXBvZGk6dHlwZT0iaW5rc2NhcGU6cGVyc3AzZCIgLz4KICAgIDxpbmtzY2FwZTpwZXJzcGVjdGl2ZQogICAgICAgaWQ9InBlcnNwZWN0aXZlNTUzMyIKICAgICAgIGlua3NjYXBlOnBlcnNwM2Qtb3JpZ2luPSIzMiA6IDIxLjMzMzMzMyA6IDEiCiAgICAgICBpbmtzY2FwZTp2cF96PSI2NCA6IDMyIDogMSIKICAgICAgIGlua3NjYXBlOnZwX3k9IjAgOiAxMDAwIDogMCIKICAgICAgIGlua3NjYXBlOnZwX3g9IjAgOiAzMiA6IDEiCiAgICAgICBzb2RpcG9kaTp0eXBlPSJpbmtzY2FwZTpwZXJzcDNkIiAvPgogICAgPGlua3NjYXBlOnBlcnNwZWN0aXZlCiAgICAgICBpZD0icGVyc3BlY3RpdmUyNTU3IgogICAgICAgaW5rc2NhcGU6cGVyc3AzZC1vcmlnaW49IjI1IDogMTYuNjY2NjY3IDogMSIKICAgICAgIGlua3NjYXBlOnZwX3o9IjUwIDogMjUgOiAxIgogICAgICAgaW5rc2NhcGU6dnBfeT0iMCA6IDEwMDAgOiAwIgogICAgICAgaW5rc2NhcGU6dnBfeD0iMCA6IDI1IDogMSIKICAgICAgIHNvZGlwb2RpOnR5cGU9Imlua3NjYXBlOnBlcnNwM2QiIC8+CiAgPC9kZWZzPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp6b29tPSI0IgogICAgIGlua3NjYXBlOmN4PSI5NS43MjM2NiIKICAgICBpbmtzY2FwZTpjeT0iLTI2Ljc3NTAyMyIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0icHgiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAgIHNob3dncmlkPSJ0cnVlIgogICAgIGlua3NjYXBlOmdyaWQtYmJveD0idHJ1ZSIKICAgICBpbmtzY2FwZTpncmlkLXBvaW50cz0idHJ1ZSIKICAgICBncmlkdG9sZXJhbmNlPSIxMDAwMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEzOTkiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iODc0IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIzMyIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTpzbmFwLWJib3g9InRydWUiPgogICAgPGlua3NjYXBlOmdyaWQKICAgICAgIGlkPSJHcmlkRnJvbVByZTA0NlNldHRpbmdzIgogICAgICAgdHlwZT0ieHlncmlkIgogICAgICAgb3JpZ2lueD0iMHB4IgogICAgICAgb3JpZ2lueT0iMHB4IgogICAgICAgc3BhY2luZ3g9IjFweCIKICAgICAgIHNwYWNpbmd5PSIxcHgiCiAgICAgICBjb2xvcj0iIzAwMDBmZiIKICAgICAgIGVtcGNvbG9yPSIjMDAwMGZmIgogICAgICAgb3BhY2l0eT0iMC4yIgogICAgICAgZW1wb3BhY2l0eT0iMC40IgogICAgICAgZW1wc3BhY2luZz0iNSIKICAgICAgIHZpc2libGU9InRydWUiCiAgICAgICBlbmFibGVkPSJ0cnVlIiAvPgogIDwvc29kaXBvZGk6bmFtZWR2aWV3PgogIDxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTciPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxnCiAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgaW5rc2NhcGU6Z3JvdXBtb2RlPSJsYXllciIKICAgICBpZD0ibGF5ZXIxIj4KICAgIDxwYXRoCiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyLjAwMDAwMDI0O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICBkPSJNIDc4LjMzMzMzMiwyNSBDIDkxLjY2NjY2NiwyNSA5NSwyNSA5NSwyNSIKICAgICAgIGlkPSJwYXRoMzA1OSIKICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2MiIC8+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS45OTk5OTk4ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgZD0iTSAzMC4zODU3MTcsMTUgTCA0Ljk5OTk5OTgsMTUiCiAgICAgICBpZD0icGF0aDMwNjEiIC8+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS45OTk5OTk3NjtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgZD0iTSAzMS4zNjIwOTEsMzUgTCA0Ljk5OTk5OTgsMzUiCiAgICAgICBpZD0icGF0aDM5NDQiIC8+CiAgICA8ZwogICAgICAgaWQ9ImcyNTYwIgogICAgICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiCiAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNi41LC0zOS41KSI+CiAgICAgIDxwYXRoCiAgICAgICAgIGlkPSJwYXRoMzUxNiIKICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MztzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICBkPSJNIC0yLjI1LDgxLjUwMDAwNSBDIC0zLjg0NzM3NCw4NC4xNDQ0MDUgLTQuNSw4NC41MDAwMDUgLTQuNSw4NC41MDAwMDUgTCAtOC4xNTYyNSw4NC41MDAwMDUgTCAtNi4xNTYyNSw4Mi4wNjI1MDUgQyAtNi4xNTYyNSw4Mi4wNjI1MDUgLTAuNSw3NS4wNjI0NTEgLTAuNSw2NC41IEMgLTAuNSw1My45Mzc1NDkgLTYuMTU2MjUsNDYuOTM3NSAtNi4xNTYyNSw0Ni45Mzc1IEwgLTguMTU2MjUsNDQuNSBMIC00LjUsNDQuNSBDIC0zLjcxODc1LDQ1LjQzNzUgLTMuMDc4MTI1LDQ2LjE1NjI1IC0yLjI4MTI1LDQ3LjUgQyAtMC40MDg1MzEsNTAuNTk5ODE1IDIuNSw1Ni41MjY2NDYgMi41LDY0LjUgQyAyLjUsNzIuNDUwNjUgLTAuMzk2Njk3LDc4LjM3OTQyNSAtMi4yNSw4MS41MDAwMDUgeiIKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2Njc2NjY2NzYyIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MztzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICBkPSJNIC0yLjQwNjI1LDQ0LjUgTCAtMC40MDYyNSw0Ni45Mzc1IEMgLTAuNDA2MjUsNDYuOTM3NSA1LjI1LDUzLjkzNzU0OSA1LjI1LDY0LjUgQyA1LjI1LDc1LjA2MjQ1MSAtMC40MDYyNSw4Mi4wNjI1IC0wLjQwNjI1LDgyLjA2MjUgTCAtMi40MDYyNSw4NC41IEwgMC43NSw4NC41IEwgMTQuNzUsODQuNSBDIDE3LjE1ODA3Niw4NC41MDAwMDEgMjIuNDM5Njk5LDg0LjUyNDUxNCAyOC4zNzUsODIuMDkzNzUgQyAzNC4zMTAzMDEsNzkuNjYyOTg2IDQwLjkxMTUzNiw3NC43NTA0ODQgNDYuMDYyNSw2NS4yMTg3NSBMIDQ0Ljc1LDY0LjUgTCA0Ni4wNjI1LDYzLjc4MTI1IEMgMzUuNzU5Mzg3LDQ0LjcxNTU5IDE5LjUwNjU3NCw0NC41IDE0Ljc1LDQ0LjUgTCAwLjc1LDQ0LjUgTCAtMi40MDYyNSw0NC41IHogTSAzLjQ2ODc1LDQ3LjUgTCAxNC43NSw0Ny41IEMgMTkuNDM0MTczLDQ3LjUgMzMuMDM2ODUsNDcuMzY5NzkzIDQyLjcxODc1LDY0LjUgQyAzNy45NTE5NjQsNzIuOTI5MDc1IDMyLjE5NzQ2OSw3Ny4xODM5MSAyNyw3OS4zMTI1IEMgMjEuNjM5MzM5LDgxLjUwNzkyNCAxNy4xNTgwNzUsODEuNTAwMDAxIDE0Ljc1LDgxLjUgTCAzLjUsODEuNSBDIDUuMzczNTg4NCw3OC4zOTE1NjYgOC4yNSw3Mi40NTA2NSA4LjI1LDY0LjUgQyA4LjI1LDU2LjUyNjY0NiA1LjM0MTQ2ODYsNTAuNTk5ODE1IDMuNDY4NzUsNDcuNSB6IgogICAgICAgICBpZD0icGF0aDQ5NzMiCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NzY2NjY3NjY2NjY2NjY2NzY2NzYyIgLz4KICAgIDwvZz4KICAgIDxwYXRoCiAgICAgICBzb2RpcG9kaTp0eXBlPSJhcmMiCiAgICAgICBzdHlsZT0iZmlsbDpub25lO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozO3N0cm9rZS1saW5lam9pbjptaXRlcjttYXJrZXI6bm9uZTtzdHJva2Utb3BhY2l0eToxO3Zpc2liaWxpdHk6dmlzaWJsZTtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICBpZD0icGF0aDM1NTEiCiAgICAgICBzb2RpcG9kaTpjeD0iNzUiCiAgICAgICBzb2RpcG9kaTpjeT0iMjUiCiAgICAgICBzb2RpcG9kaTpyeD0iNCIKICAgICAgIHNvZGlwb2RpOnJ5PSI0IgogICAgICAgZD0iTSA3OSwyNSBBIDQsNCAwIDEgMSA3MSwyNSBBIDQsNCAwIDEgMSA3OSwyNSB6IiAvPgogIDwvZz4KPC9zdmc+Cg==' }}
-
     }, joint.shapes.logic.Gate21.prototype.defaults),
-
     operation: function(input1, input2) {
         return (!input1 || !input2) && (input1 || input2);
     }
-
 });
 
 
 
-
-joint.shapes.logic.myAND = joint.shapes.logic.Gate21.extend({
-
-
+//And with Three Inputs
+joint.shapes.logic.AndThree = joint.shapes.logic.Gate21.extend({
     markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
-
     defaults: _.defaultsDeep({
-
-        type: 'logic.myAND',
-        attrs: { image: { 'xlink:href': 'data:image/png;base64,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'
-    
+        type: 'logic.AndThree',
+        attrs: { image: { 'xlink:href': './shapes/AndThree.svg'
         },
+            '.input1': { ref: '.body', 'ref-x': 1.99, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 1.99, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 1.99, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }, 
         
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2, input3) {
+        return input1 && input2 && input3;
+    },
+});
+
+
+//And with Four Inputs
+joint.shapes.logic.AndFour = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.AndFour',
+        attrs: { image: { 'xlink:href': './shapes/AndFour.svg'
+        },
+            '.input1': { ref: '.body', 'ref-x': 1.0, 'ref-y': 0.2, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.0, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2, input3, input4) {
+        return input1 && input2 && input3 && input4;
+    },
+});
+
+//And with Five Inputs
+joint.shapes.logic.AndFive = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.AndFive',
+        attrs: { image: { 'xlink:href': './shapes/AndFive.svg'
+        },
             '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2, input3, input4, input5) {
+        return input1 && input2 && input3 && input4 && input5;
+    },
+});
+//Nand with Three Inputs
+joint.shapes.logic.NandThree = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.NandThree',
+        attrs: { image: { 'xlink:href': './shapes/NandThree.svg' },
+        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
             '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
             '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
             '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
-
         }
-
     }, joint.shapes.logic.Gate21.prototype.defaults),
-
-    operation: function(input1, input2, input3) {
-        return input1 && input2 && input3;
-    },
-
+    operation: function(input1, input2) {
+        return !(input1 && input2);
+    }
+});
+//Nand with Four Inputs
+joint.shapes.logic.NandFour = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Nand',
+        attrs: { image: { 'xlink:href': './shapes/NandFour.svg' },
+        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return !(input1 && input2);
+    }
+});
+//Nand with Five Inputs
+joint.shapes.logic.NandFive = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Nand',
+        attrs: { image: { 'xlink:href': './shapes/NandFive.svg' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return !(input1 && input2);
+    }
 });
 
+//Or with Three Inputs
+joint.shapes.logic.OrThree = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Or',
+        attrs: { image: { 'xlink:href': './shapes/orThree.svg' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2, input3) {
+        return input1 || input2 || input3;
+    }
+});
+//Or with Four Inputs
+joint.shapes.logic.OrFour = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Or',
+        attrs: { image: { 'xlink:href': './shapes/orFour.svg' },
+            '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.25, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.42, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.58, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return input1 || input2;
+    }
+});
+//Or with Five Inputs
+joint.shapes.logic.OrFive = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Or',
+        attrs: { image: { 'xlink:href': './shapes/orFive.svg' },
+            '.input1': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.17, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.34, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.50, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.66, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 5.0, 'ref-y': 0.84, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+             circle: { r: 3, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return input1 || input2;
+    }
+});
 
+//Nor with Three Inputs
+joint.shapes.logic.NorThree = joint.shapes.logic.Gate21.extend({
+    defaults: _.defaultsDeep({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+        type: 'logic.Nor',
+        attrs: { image: { 'xlink:href': './shapes/norThree.svg' },
+        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return !(input1 || input2);
+    }
+});
+//Nor with Four Inputs
+joint.shapes.logic.NorFour = joint.shapes.logic.Gate21.extend({
+    defaults: _.defaultsDeep({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+        type: 'logic.Nor',
+        attrs: { image: { 'xlink:href': './shapes/norFour.svg' },
+        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return !(input1 || input2);
+    }
+});
+//Nor with Five Inputs
+joint.shapes.logic.NorFive = joint.shapes.logic.Gate21.extend({
+    defaults: _.defaultsDeep({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+        type: 'logic.Nor',
+        attrs: { image: { 'xlink:href': './shapes/norFive.svg' },
+        '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
+            '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+            }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return !(input1 || input2);
+    }
+});
 
-
-
-
+//Xor with Three Inputs 
+joint.shapes.logic.XorThree = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xor',
+        attrs: { image: { 'xlink:href': './shapes/xorThree.svg' }, 
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || input2) && (input1 || !input2);
+    }
+});
+//Xor with Four Inputs 
+joint.shapes.logic.XorFour = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xor',
+        attrs: { image: { 'xlink:href': './shapes/xorFour.svg' }, 
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || input2) && (input1 || !input2);
+    }
+});
+//Xor with Five Inputs 
+joint.shapes.logic.XorFive = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xor',
+        attrs: { image: { 'xlink:href': './shapes/xorFive.svg' }, 
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || input2) && (input1 || !input2);
+    }
+});
+//Xnor with Three Inputs
+joint.shapes.logic.XnorThree = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xnor',
+        attrs: { image: { 'xlink:href': './shapes/xnorThree.svg' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || !input2) && (input1 || input2);
+    }
+});
+//Xnor with Four Inputs
+joint.shapes.logic.XnorFour = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xnor',
+        attrs: { image: { 'xlink:href': './shapes/xnorFour.svg' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || !input2) && (input1 || input2);
+    }
+});
+//Xnor with Five Inputs
+joint.shapes.logic.XnorFive = joint.shapes.logic.Gate21.extend({
+    markup: '<g class="rotatable"><g class="scalable"><image class="body"/></g><circle class="input input1"/><circle  class="input input2"/><circle  class="input input3"/><circle  class="input input4"/><circle  class="input input5"/><circle class="output"/></g>',
+    defaults: _.defaultsDeep({
+        type: 'logic.Xnor',
+        attrs: { image: { 'xlink:href': './shapes/xnorFive.svg' },
+            '.input1': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.28, magnet: 'passive', port: 'in1' },
+            '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
+            '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
+            '.input4': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in4' },
+            '.input5': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in5' },
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+        }
+    }, joint.shapes.logic.Gate21.prototype.defaults),
+    operation: function(input1, input2) {
+        return (!input1 || !input2) && (input1 || input2);
+    }
+});
 
 
 joint.shapes.logic.Wire = joint.dia.Link.extend({

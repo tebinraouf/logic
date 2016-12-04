@@ -65,6 +65,7 @@ panAndZoom = svgPanZoom(targetElement.childNodes[0],{
     
 });
 panAndZoom.disableDblClickZoom();
+//min is set to 0.3
 panAndZoom.setMinZoom(0.3);
 
 // paper.on('blank:pointerdown', function (evt, x, y) {
@@ -207,39 +208,83 @@ function removeElementsCSSMenu(){
 function addGate(){
     var userSelectedIndex = document.getElementById('listOfGates').selectedIndex;
     var userSelectedText = document.getElementById('listOfGates').options;
-    if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type')){
-        var or = new joint.shapes.logic.Or({ position: { x: getRandomArbitrary(100, windowWidth), y: 60 }});
-        graph.addCell(or);
-    } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type')){
-        var and = new joint.shapes.logic.myAND({ position: { x: 340, y: 60 }});
-        graph.addCell(and);
-    } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type')){
-        var nand = new joint.shapes.logic.Nand({ position: { x: 340, y: 60 }});
-        graph.addCell(nand);
-    } else if (userSelectedText[userSelectedIndex].text === gateLists[5].get('type')){
-        var nor = new joint.shapes.logic.Nor({ position: { x: 340, y: 60 }});
-        graph.addCell(nor);
-    } else if (userSelectedText[userSelectedIndex].text === gateLists[6].get('type')){
-        var xor = new joint.shapes.logic.Xor({ position: { x: 340, y: 60 }});
-        graph.addCell(xor);
-    } else if (userSelectedText[userSelectedIndex].text === gateLists[7].get('type')){
-        var xnor = new joint.shapes.logic.Xnor({ position: { x: 340, y: 60 }});
-        graph.addCell(xnor);
-    }    
+
+    var numberofgates = document.getElementById("numberOfGate").value;
+
+    if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type') && numberofgates==3){
+        var orThree = new joint.shapes.logic.OrThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(orThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type') && numberofgates==4){
+        var orFour = new joint.shapes.logic.OrFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(orFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[2].get('type') && numberofgates==5){
+        var orFive = new joint.shapes.logic.OrFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(orFive);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type') && numberofgates==3){
+         var andThree = new joint.shapes.logic.AndThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(andThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type') && numberofgates==4){
+         var andFour = new joint.shapes.logic.AndFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(andFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[3].get('type') && numberofgates==5){
+         var andFive = new joint.shapes.logic.AndFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(andFive);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type') &&  numberofgates==3){
+        var nandThree = new joint.shapes.logic.NandThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(nandThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type') &&  numberofgates==4){
+        var nandFour = new joint.shapes.logic.NandFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(nandFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[4].get('type') &&  numberofgates==5){
+        var nandFive = new joint.shapes.logic.NandFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(nandFive);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[5].get('type') &&  numberofgates==3){
+        var norThree = new joint.shapes.logic.NorThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(norThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[5].get('type') &&  numberofgates==4){
+        var norFour = new joint.shapes.logic.NorFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(norFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[5].get('type') &&  numberofgates==5){
+        var norFive = new joint.shapes.logic.NorFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(norFive);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[6].get('type') &&  numberofgates==3){
+        var xorThree = new joint.shapes.logic.XorThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xorThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[6].get('type') &&  numberofgates==4){
+        var xorFour = new joint.shapes.logic.XorFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xorFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[6].get('type') &&  numberofgates==5){
+        var xorFive = new joint.shapes.logic.XorFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xorFive);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[7].get('type') &&  numberofgates==3){
+        var xnorThree = new joint.shapes.logic.XnorThree({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xnorThree);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[7].get('type') &&  numberofgates==4){
+        var xnorFour = new joint.shapes.logic.XnorFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xnorFour);
+    } else if (userSelectedText[userSelectedIndex].text === gateLists[7].get('type') &&  numberofgates==5){
+        var xnorFive = new joint.shapes.logic.XnorFive({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(xnorFive);
+    }
+    
+
 }
-        var myAnd = new joint.shapes.logic.myAND({ position: { x: 40, y: 60 }});
-
-        //console.log(myAnd.operation(1,1,1));
-        console.log(myAnd);
-        myAnd.ports.in1 = 1;
-        myAnd.ports.in2 = 1;
-        myAnd.ports.in3 = 1;
-        //console.log(myAnd.operation);
-        console.log(myAnd.operation(myAnd.ports["in1"],myAnd.ports["in2"],myAnd.ports["in3"]));
-        
+       
 
 
-graph.addCell(myAnd);
+             var andFour = new joint.shapes.logic.AndFour({ position: { x: getRandomArbitrary(50, 200), y: getRandomArbitrary(0, 100) }});
+        graph.addCell(andFour);
+
+
+
+        // //console.log(myAnd.operation(1,1,1));
+        // console.log(andThree);
+        // andThree.ports.in1 = 1;
+        // andThree.ports.in2 = 1;
+        // andThree.ports.in3 = 1;
+        // //console.log(myAnd.operation);
+        // console.log(andThree.operation(andThree.ports["in1"],andThree.ports["in2"],andThree.ports["in3"]));
+        //graph.addCell(andThree);
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
