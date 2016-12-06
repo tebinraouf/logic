@@ -14753,6 +14753,7 @@ joint.shapes.uml.Transition = joint.dia.Link.extend({
 });
 
 
+
 joint.shapes.logic = {};
 
 joint.shapes.logic.Gate = joint.shapes.basic.Generic.extend({

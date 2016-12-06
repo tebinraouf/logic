@@ -128,11 +128,13 @@ var highlightedCellView = [];
 //remove on double click
 paper.on('cell:pointerdblclick', function(cellview, evt, x, y) { 
     //cellview.highlight();
-    cellview.remove();
+    cellview.model.remove({disconnectLinks: true});
+    if (graph.getElements().length==0){
+        graph.clear();
+    }
 });
 //highlight on click
 paper.on('cell:pointerclick', function(cellView) {
-    console.log(cellView.el);
     cellView.highlight();
     highlightedCellView.push(cellView);
 });
@@ -176,9 +178,7 @@ function listGates(){
         output += '</option>';
     }
     list.innerHTML = output;
-
 }
-
 $("#customGate").click(function(event){
     if(!$("#menu").is(":visible")){
         var tag = '<div class="row" id="menu"><div class="col-lg-12" style="height: 40px; background:#E3E0CE;">Test</div></div>';
@@ -342,9 +342,9 @@ paper.on('link:connect', function(evt, cellView, magnet, arrowhead) {
     // console.log(graph.getElements());
     // console.log(graph.getConnectedLinks(graph.getElements()[0]));
     // console.log(graph.getLinks());
-     console.log("sourceMagnet: "+evt["sourceMagnet"].output);
-     console.log(evt);
-     console.log(magnet);
+    //  console.log("sourceMagnet: "+evt["sourceMagnet"].output);
+    //  console.log(evt);
+    // console.log(magnet);
 
 
     // for (var i=0; i<=graph.getElements().length; i++){
@@ -354,25 +354,72 @@ paper.on('link:connect', function(evt, cellView, magnet, arrowhead) {
 
 graph.on('change:source change:target', function(link) {
     if (link.get('source').id && link.get('target').id) {
-        console.log("Source: "+link.get('source').id);
-        console.log("Target: "+link.get('target').id);
+        // console.log("Source: "+link.get('source').id);
+        // console.log("Target: "+link.get('target').id);
         // both ends of the link are connected.
     }
 });
 
-paper.on('blank:pointerup ', function(evt, x, y) { 
-    //console.log(graph.toJSON());
-});
+
+
+
 
 graph.on('change remove add', function(cellView){
     localStorage.setItem('graph', JSON.stringify(graph.toJSON()));
-    console.log(graph.toJSON());
-
 });
+
+
 
 
 var graphFromLocalStorage = localStorage.getItem('graph');
 graph.fromJSON(JSON.parse(graphFromLocalStorage));
+var result = JSON.parse(graphFromLocalStorage);
+/*
+console.log(graph.getConnectedLinks());
+
+var objects = [];
+var object = {
+    source: {
+        id: '',
+        type: '',
+    },
+    target: {
+        id: '',
+        type: '',
+    }
+}
+
+for(var i=0; i<result["cells"].length;i++){
+
+    var source = result["cells"][i].source;
+    var target = result["cells"][i].target;
+
+    var type = result["cells"][i].type;
+    var id = result["cells"][i].id;
+
+    if(type!="logic.Wire"){
+        object.source.type = type;
+        object.target.type = type;
+    }
+
+
+    if(typeof source !== 'undefined' && typeof target !== 'undefined'){
+
+        object.source.id = source.id;
+        object.target.id = target.id;
+
+        objects.push(object);
+
+        console.log('Source: '+source.id+' id: '+source.port+ ' Type: '+type);
+        console.log('Target: '+target.id+' id: '+target.port);   
+    }
+
+    //console.log(`Type: ${result["cells"][i]["type"]}\nid: ${result["cells"][i]["id"]}\n `);
+}
+
+console.log(objects);
+*/
+
 
 function setGrid(paper, size, color, offset) {
     // Set grid size on the JointJS paper object (joint.dia.Paper instance)
