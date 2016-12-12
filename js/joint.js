@@ -15102,7 +15102,7 @@ joint.shapes.logic.OrThree = joint.shapes.logic.Gate21.extend({
             '.input2': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.5, magnet: 'passive', port: 'in2' },
             '.input3': { ref: '.body', 'ref-x': 2.3, 'ref-y': 0.73, magnet: 'passive', port: 'in3' },
             '.output': { ref: '.body', 'ref-dx': -4, 'ref-y': 0.5, magnet: true, port: 'out' },
-             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 }
+             circle: { r: 4, stroke: 'black', fill: 'transparent', 'stroke-width': 2 },
         }
     }, joint.shapes.logic.Gate21.prototype.defaults),
     operation: function(input1, input2, input3) {
