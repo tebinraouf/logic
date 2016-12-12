@@ -11,7 +11,8 @@ This project is to populate circuit diagrams online. This project is using Joint
 
 ## Current features
 * Local browser storage 
-* Drag and drop to canvas 
+* Drag and drop to canvas
+* Delete elements on double click 
 * Up to 5 input logic gates
 
 
