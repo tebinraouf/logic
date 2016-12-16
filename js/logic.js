@@ -17,7 +17,7 @@ var graph = new joint.dia.Graph,
         el: $('#paper'),
         model: graph,
         height: windowHeight,
-        width: windowWidth - 188,
+        width: windowWidth,
         gridsize: gridsize,
         snapLinks: true,
         linkPinning: false,
@@ -54,6 +54,7 @@ panAndZoom = svgPanZoom(targetElement.childNodes[0], {
     fit: false,
     zoomScaleSensitivity: 0.1,
     panEnabled: false,
+    center: false,
     onZoom: function (scale) {
         currentScale = scale;
         setGrid(paper, gridsize * 15 * currentScale, '#808080');
@@ -137,7 +138,7 @@ paper.on('cell:pointerclick', function (cellView) {
     cellView.highlight();
     highlightedCellView.push(cellView);
     //console.log(graph.getConnectedLinks(cellView.model));
-    console.log(cellView.model);
+    console.log(cellView.model.attributes.position);
 });
 //unhighlight on paper click
 paper.on('blank:pointerclick', function (cellview) {
@@ -327,13 +328,10 @@ sidePaper.on('cell:pointerdown', function (cellView, e, x, y) {
         // Dropped over paper ?
         if (x > target.left && x < target.left + paper.$el.width() && y > target.top && y < target.top + paper.$el.height()) {
             var s = flyShape.clone();
+
             s.position(x - target.left - offset.x, y - target.top - offset.y);
             graph.addCell(s);
 
-            //console.log(graph.getLinks());
-            //console.log(graph.getElements());
-            //console.log(graph.getConnectedLinks(graph.getElements()[0]));
-            //console.log(s);
         }
         $('body').off('mousemove.fly').off('mouseup.fly');
         flyShape.remove();
